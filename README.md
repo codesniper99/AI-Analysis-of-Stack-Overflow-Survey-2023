@@ -6,14 +6,12 @@ A comprehensive database application developed using SQL for relational database
 
 ## Data
 
-Data is Stack OVerflow 2023 survey results [here](https://cdn.stackoverflow.co/files/jo7n4k8s/production/49915bfd46d0902c3564fd9a06b509d08a20488c.zip/stack-overflow-developer-survey-2023.zip)
+Data is Stack Overflow 2023 survey results [here](https://cdn.stackoverflow.co/files/jo7n4k8s/production/49915bfd46d0902c3564fd9a06b509d08a20488c.zip/stack-overflow-developer-survey-2023.zip)
 
 ## Problem & Description
 
 This project leverages data from the publicly accessible Stack Overflow Survey of 2023, which includes responses from over 24,000 developers. The survey captures a wide range of information, such as developers' preferences, the frameworks and languages they use daily, and more.
-This project leverages data from the publicly accessible Stack Overflow Survey of 2023, which includes responses from over 24,000 developers. The survey captures a wide range of information, such as developers' preferences, the frameworks and languages they use daily, and more.
 
-Given the significant AI advancements over the past three years, this project also explores how developers are utilizing AI. The 2023 survey introduced a new AI section, highlighting the industry's trends towards AI adoption in areas such as:
 Given the significant AI advancements over the past three years, this project also explores how developers are utilizing AI. The 2023 survey introduced a new AI section, highlighting the industry's trends towards AI adoption in areas such as:
 
 1. Project Planning
@@ -77,22 +75,11 @@ Some of the interesting AI insights we discovered include:
 3. **Popular Languages:** JavaScript remains the most popular language, which is unsurprising.
 
 4. **High-Income Languages:** Niche languages such as AIX, Ada, TidyVerse, Flow, and technologies like Transformers and Deep Learning are associated with higher median salaries.
-   Some of the interesting AI insights we discovered include:
-
-5. **Legal Industry:** The legal industry exhibits minimal AI usage, likely due to the difficulty in verifying the factual accuracy of AI-generated information. Recently, there was a case where a lawyer used ChatGPT, resulting in fabricated precedent cases.
-
-6. **AI Adoption:** Support for AI in workflows follows a bell curve, or normal distribution, skewed towards favorable opinions, indicating significant AI adoption.
-
-7. **Popular Languages:** JavaScript remains the most popular language, which is unsurprising.
-
-8. **High-Income Languages:** Niche languages such as AIX, Ada, TidyVerse, Flow, and technologies like Transformers and Deep Learning are associated with higher median salaries.
 
 ## Hotspots & Bottlenecks
 
 - We can optimize storage by using enums for storing string values. Currently, we store the exact strings provided by each developer, which consumes more space than necessary.
-- We can optimize storage by using enums for storing string values. Currently, we store the exact strings provided by each developer, which consumes more space than necessary.
 
 ## Analysis & Limitation
 
-I look forward to analyzing the 2024 Stack Overflow data to uncover more interesting anecdotes and insights. This project demonstrates the power of relational databases and the ease of accessing and sharing results when data is modeled correctly.
 I look forward to analyzing the 2024 Stack Overflow data to uncover more interesting anecdotes and insights. This project demonstrates the power of relational databases and the ease of accessing and sharing results when data is modeled correctly.
