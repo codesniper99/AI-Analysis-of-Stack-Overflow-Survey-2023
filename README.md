@@ -1,54 +1,79 @@
 # AI Analysis of Stack Overflow Survey 2023
 
-A Database application developed using SQL for relational database, Flet for User interface, and hosted on the cloud, that gives us interesting insights about the current state of developers around the world with respect to their opinion towards using AI in their work
+A comprehensive database application developed using SQL for relational database management, Flet for the user interface, and hosted on the cloud. This application provides insightful analysis of the current state of developers worldwide, particularly focusing on their perspectives towards integrating AI into their workflow.
+
+**Note:** Usage of this code without permission is prohibited.
 
 ## Problem & Description
 
-This project takes data from the Stack Overflow Survey of 2023 which is opensource and publicly accessible.
-It contains data from over 24,000 developers who filled the survey asking their preferences, various information about the frameworks/languages they use daily etc.
+This project leverages data from the publicly accessible Stack Overflow Survey of 2023, which includes responses from over 24,000 developers. The survey captures a wide range of information, such as developers' preferences, the frameworks and languages they use daily, and more.
 
-As the project progressed I also thought it would be interesting to also include insights about how developers use AI due to the AI boom that has been going on in the past 3 years.
-
-In 2023 Stack Overflow included a new AI section which highlights how the current trend is in the industry towards AI adoption. Fields such as:
+Given the significant AI advancements over the past three years, this project also explores how developers are utilizing AI. The 2023 survey introduced a new AI section, highlighting the industry's trends towards AI adoption in areas such as:
 
 1. Project Planning
-2. Learn about Code base
+2. Learning about Codebases
 3. Documenting Code
 4. Writing Code
 5. Debugging and Getting Help
 6. Testing Code
 7. Committing and Reviewing Code
 8. Deployment and Monitoring
-9. Collaborating with teammates
+9. Collaborating with Teammates
 
-and many more fields show us how present Developers are adapting to the AI boom
+These and other areas illustrate how developers are adapting to the AI boom.
 
-## Instruction
+## Instructions
 
-- On the `main` branch, you can navigate to the app folder and from there using the command
-  `python3 main.py` it should launch the flet application.
-  ![img](home.png)
+To run the application:
 
-You can navigate between the different screens present in the hamburger icon
+1. On the `main` branch, navigate to the app folder.
+2. Execute the following command to launch the Flet application:
+   ```bash
+   python3 main.py
+   ```
+
+![img](images/Home%20Page.png) 3. You can choose amongst Developer Insights, AI Insights, Miscellaneous Insights
+![img](images/Hamburger.png) 4. Developer Insights
+![img](images/Dev_insights.png)
+![img](images/devinsights1.png)
+![img](images/devinsights2.png)
+![img](images/devinsights3.png)
+![img](images/devinsights4.png) 5. AI Insights
+![img](images/aiinsights1.png)
+![img](images/aiinsight2.png)
+![img](images/aiinsight3.png)
+![img](images/aiinsight4.png) 6. Miscellaneous Insights
+![img](images/miscinsights1.png)
+![img](images/miscinsights2.png)
+![img](images/miscinsights3.png)
+![img](images/miscinsights4.png)
 
 ## Challenges
 
+- Hosting the data on the cloud presented significant challenges, particularly in finding the right resources. We ultimately chose [Aiven](https://aiven.io/) to host our MySQL server, allowing it to be accessible on any system.
+
+- Developing the ER Diagram and relational schema from scratch was a substantial task, especially given the complexity of 24,000 rows of developer information.
+  ![ER Diagram](images/Step2A.png)
+  ![Relational Schema](images/Relational.png)
+
+- Parsing such a large CSV file was also time-consuming, as it contained nearly 100 columns for each developer.
+
 ## Testing
 
--
+Some of the interesting AI insights we discovered include:
+
+1. **Legal Industry:** The legal industry exhibits minimal AI usage, likely due to the difficulty in verifying the factual accuracy of AI-generated information. Recently, there was a case where a lawyer used ChatGPT, resulting in fabricated precedent cases.
+
+2. **AI Adoption:** Support for AI in workflows follows a bell curve, or normal distribution, skewed towards favorable opinions, indicating significant AI adoption.
+
+3. **Popular Languages:** JavaScript remains the most popular language, which is unsurprising.
+
+4. **High-Income Languages:** Niche languages such as AIX, Ada, TidyVerse, Flow, and technologies like Transformers and Deep Learning are associated with higher median salaries.
 
 ## Hotspots & Bottlenecks
 
--
+- We can optimize storage by using enums for storing string values. Currently, we store the exact strings provided by each developer, which consumes more space than necessary.
 
 ## Analysis & Limitation
 
-![img](speedup-balance.png)
-
-![img](speedup-steal.png)
-
--
-
-## Comparison
-
--
+I look forward to analyzing the 2024 Stack Overflow data to uncover more interesting anecdotes and insights. This project demonstrates the power of relational databases and the ease of accessing and sharing results when data is modeled correctly.
